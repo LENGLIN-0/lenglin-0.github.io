@@ -3,17 +3,28 @@
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="Simulation d'une mission spatiale dans le système solaire">
-        <meta name="auteurs" content="LACHEMOT Lydia,LENGLIN Thomas,GHOUDANE Sabri">
+        <meta name="auteur" content="LACHEMOT Lydia,LENGLIN Thomas,GHOUDANE Sabri">
         <meta name="keywords" content="mission spatiale, simulation, système solaire, fusée, satellite, sonde">
-        <meta name="date" content="2026-02-11T13:43:23+0100" >
+        <meta name="date" content="2026-02-11T22:09:59+0100" >
         <title>Mission Spatiale</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/png" href="./images/rocket.png">
+        
+        <style> 
+        .interne-style{
+         border: 2px dashed #144a99; 
+         padding: 10px; 
+         background-color: #eef6ff; 
+         } 
+         </style>
     </head>
     <body>
         <header id="haut">
-            <a href="index.html"><img src="./images/rocket.png" alt="logo de la fusée"></a>
-            <nav>
+        		<div class="header-left"> 
+        		<a href="index.html"> <img src="./images/rocket.png" alt="logo de la fusée"> </a> 
+        		</div>
+
+            <nav id="menu-principal">
                 <ul>
                     <li><a href="index.html">Mission</a></li>
                     <li><a href="systeme_solaire.html">Système Solaire</a></li>
@@ -22,46 +33,72 @@
                     <li><a href="satellite.html">Satellite</a></li>
                     <li><a href="sonde.html">Sonde</a></li>
                 </ul>
+               
             </nav>
+            <div class="header-right">
+  					  <a href="https://www.cyu.fr/">
+       			 <img src="./images/cyLogo.png" alt="logo cergy université">
+   				 </a>
+				</div>
 
-            <div class="sidebar"> 
-                <a href="#intro_mission">Introduction</a> 
-                <a href="#detail_mission">Détail de la mission</a> 
-                <a href="#spec_mission">Spécificités de la mission</a> 
-                <a href="#LEO">LEO</a>
-                <a href="#GEO">GEO</a>
-                <a href="#interplanetaire">Interplanétaire</a>
-                <a href="#notes">Notes</a>
-            </div>
             
         </header>
+        
+       <nav id="menu-interne">
+        <ul> 
+        <li><a href="#presentation">Présentation</a> </li>
+        <li><a href="#equipe">Équipe</a></li>
+        <li><a href="#objectif">Objectif </a></li>
+        <li><a href="#spec">Spécification</a></li>
+        </ul>
+       </nav>
+         
         <main>
-            <h1 class="bleu">Mission Spatiale</h1>
-            <figure>
-                <img src="./images/mission/" alt="image d'une de la fusée Ariane 5">
-                <figcaption>Ariane 5 avec sa charge utile de 4 satellites. Photographe: Pierre Carril/ESA</figcaption>
-            </figure>
-            <section id="intro_mission">
-                <h2>   Introduction  </h2>
-                <figure>
-                    <img src="./images/DiagExploSpac.drawio.png" alt="diagramme du plan de notre site">
-                    <figcaption>Diagramme du plan de notre site</figcaption>
+            <h1 class="darkbleu">Mission Spatiale</h1>
+           <figure>
+                    <img src="./images/plan-site.png" alt="diagramme du plan de notre site">
+                    <figcaption>Plan du site</figcaption>
                 </figure>
+            <section id="presentation">
+                <h2>   Introduction  </h2>
                 <p>Ce projet a été réalisé par un groupe de trois étudiants en</p>
                 <p><strong>Licence 2 Informatique</strong> dans l'université de Cergy-Pontoise. </p>
                 <p>Il s’inscrit dans le cadre de notre formation universitaire et vise à mettre en pratique</p>
                 <p>nos compétences en programmation orienté objet, en conception logicielle</p>
                 <p>et en développement d’interfaces graphique.</p>
             </section>
-            <section id="detail_mission">
+             <section id="equipe">
+            		<h2>Equipe: </h2>
+            		<ul>
+            		
+            		<li class="interne-style">Lydia LACHEMOT
+            			<p>- Rôle : architecture,logique métier, contrôleur</p>
+            		
+            		</li>
+            		<li class="interne-style">Thomas LENGLIN
+            			<p>- Rôle : développement, interface graphique,contrôleur  </p>
+            		</li>
+            		<li class="interne-style">Sabri GHOUDANE
+            			<p>- Rôle : interface graphique, documentation ,contrôleur </p>
+            		</li>
+            		
+            		</ul>
+            </section>
+            
+            <section id="objectif">
                 <h2>   Objectif du projet GLP</h2>
                 <p>Le but du projet Génie Logiciel nommé SPATIAL est d'effectuer une simulation de l’industrie spatiale,
                 <p>en particulier le lancement des fusées qui portent les satellites ou les sondes.</p>
                 <p>Il faut ainsi simuler des comportements en termes de missions de satellites </p>
                 <p>(pour la planète Terre) et des sondes pour d’autres planètes.</p>
                 <p>Il doit donc en résulter des animations pédagogiques des fonctionnements des systèmes.</p>
+           
+            
             </section>
-            <section id="spec_mission">
+            
+            
+            
+            <section id="spec">
             <h2>    Spécification de la mission</h2>
             <p>
                 Notre logiciel permet de simuler différentes missions spatiales
@@ -85,6 +122,7 @@
                     <li>Maintenir une trajectoire circulaire stable.</li>
                 </ul>
             </section>
+           
             <section id="GEO">
                 <h3>2. Mise en orbite géostationnaire (GEO)</h3>
                 <p>
@@ -118,23 +156,22 @@
                     <li>Des corrections de trajectoire en cours de voyage ;</li>
                     <li>L’arrivée en orbite ou l’atterrissage sur la planète cible.</li>
                 </ul>
+                 </section>
             </section>
-            </section>
-            <aside id="notes">
-                <a href="./README.pdf" target="_blank">
-  Ouvrir le PDF
-</a>
-
+            <aside class ="bleu" style="text-decoration: underline;" id="ressources">
                 <h2>Ressources utiles</h2>
                 <ol>
-                    <li id="note1">
-                        <p>lien du site departement informatique de l'université : <a href="https://depinfo.u-cergy.fr/">lien</a></p>
+                    <li>
+                    Departement informatique de l'université : <a href="https://depinfo.u-cergy.fr/">Site officiel</a>
                     </li>
-                    <li id="note2">
-                        <p>lien du site de l'enseignant en Génie Logiciel : <a href="https://depinfo.u-cergy.fr/~tliu/glp.php">lien</a></p>
+                    <li >
+                        Cours en Génie Logiciel : <a href="https://depinfo.u-cergy.fr/~tliu/glp.php">Cours GLP</a>
                     </li>
-                    <li id="note3">
-                        <p>Lancement de la mission <em>Mars Science Laboratory</em> : <a href="https://en.wikipedia.org/wiki/Mars_Science_Laboratory?id=#Launch_vehicle">lien</a></p>
+                    <li>
+                        <p>Lancement de la mission <em>Mars Science Laboratory</em> : <a href="https://en.wikipedia.org/wiki/Mars_Science_Laboratory?id=#Launch_vehicle">Voir </a></p>
+                    </li>
+                    <li>
+                        Ouvrir la notice readme : <a href="./README.pdf" target="_blank">README.pdf</a>
                     </li>
                 </ol>
             </aside>
